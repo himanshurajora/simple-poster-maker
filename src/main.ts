@@ -2,6 +2,8 @@ import {jsPDF} from 'jspdf'
 import Bg from './demo.jpg'
 
 // get form element by id and add event listener
+const description = document.getElementById('description') as HTMLInputElement
+description.value = "Description : The Announcement is just about to remove anyone who becomes an obstacle in our path";
 const form = document.getElementById('form')
 form!.addEventListener('submit', (e) => {
     e.preventDefault()
@@ -9,7 +11,6 @@ form!.addEventListener('submit', (e) => {
     
     // get the title and description elements
     const title = document.getElementById('title') as HTMLInputElement
-    const description = document.getElementById('description') as HTMLInputElement
     const link = document.getElementById('link') as HTMLInputElement
 
     var bg = new Image()
